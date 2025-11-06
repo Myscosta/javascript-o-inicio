@@ -62,20 +62,108 @@ console.log(typeof salario)
 console.log(typeof fumante)
 
 // Operadores
-//     Operador Atribuição
+/*
+== → igual (valor)
+=== → igual (valor e tipo) perfeitamente igual, comparando o tipo e valor
+!= → diferente (valor)
+> → maior que
+< → menor que
+>= → maior ou igual
+<= → menor ou igual
+*/
+ 
+//     Operador Atribuição (=)
+salario = 2500
 
-//     Operadores aritméticos
+//     Operadores aritméticos (+,-,*,/)
+let n1 = 10, n2 = 5
+console.log(n1+n2) // soma
+console.log(n1-n2) // subtração
+console.log(n1*n2) // multiplicação
+console.log(n1/n2) // divisão
+console.log(10%2) // módulo (pega o resto da divisão)
 
-//     Operadores relacionais
 
-//     Operadores lógicos
+//     Operadores relacionais (==,!=,>,<,.=,<=)
+console.log(n1==n2)
+console.log(n1!=n2)
+console.log(n1>n2)
+console.log(n1<n2)
+console.log(n1>=n2)
+console.log(n1<=n2)
+
+//     Operadores lógicos ! - não / NOT || - / ou OR && - e / AND
+let altura = 1.2
+let peso = 80
+let tipo = "criança"
+
+// como o || apenas uma verificação precisa ser verdadeira
+console.log(altura > 1.5 || peso < 150 || tipo !="criança")
+
+// com o && tem que atender a todos os criterios e todas as verificações devem ser verdadeias para o resultado final ser verdadeira
+console.log(altura > 1.5 && peso < 150 && tipo != "criança")
+
+// muda o resultado final, se for verdadeira vira falso e se for falso vira verdadeiro
+console.log(!10>5)
+
 
 // Estrutura
 //     Estrutura de controle/decisão
+let carro = "fiat"
 
+if(carro == "bmw"){
+    console.log(" vc ta bem mais ou menos") // verdadeiro
+}else{
+    console.log("A vida ta progredindo") // falso
+}
+
+let idadealuno = 20
+if(idadealuno >= 18 ){
+    console.log("maior de idade")
+}else{
+    console.log("menor de idade")
+}
 //     Laços de repetição
+let controle = 1
+while(controle <=10){
+    console.log(controle)
+    controle = controle + 1
+}
+controle = 1
+while(controle<= 10){
+    console.log(7*controle)
+    controle = controle + 1
+}
 
 // Arrays --> vetor
+let zoologico = ['leão','elefante','zebra','ariranha','lobo guará']
+console.log(zoologico [2]) // o numero 2 se refre a posição no caso o inidador ' sempre começa do 0
+console.log(zoologico.length)
 
+let frutas = ['🍒','🍓','🍏','🍊','🍋‍🟩','🍐','🍍','🍌','🍈','🍇'] 
+console.log(frutas)
+frutas.push('🍉') // push serve para adicionar mais itens mesmo que nao tenha sido colocada dento no []
+console.log(frutas)  
+
+let alunos = []
+alunos.push("joao")
+alunos.push("maria")
+alunos.push("jose")
+alunos.push("paula")
+console.log(alunos)
+
+
+ // o uso dos () indentifica a "função" .
 // Funções personalizadas
- 
+
+function mensagem(){
+    console.log("olá")
+    console.log("seja bem vindo")
+    console.log(":)")
+}
+mensagem()
+
+function conta ( horas, sal_hora){
+    console.log(horas * sal_hora)
+}
+conta(140,75)
